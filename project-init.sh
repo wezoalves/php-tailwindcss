@@ -12,11 +12,14 @@ printf '<div class="font-sans bg-white flex flex-col min-h-screen w-full"> <div>
 # TAILWIND INSTALL
 npm install -D tailwindcss
 
+# AUTOPREFIXER INSTALL
+npm install -D autoprefixer
+
 # TAILWIND CSS BASE
 printf '@tailwind base;\n@tailwind components;\n@tailwind utilities;\n' > dist/input.css
 
 # TAILWIND CONFIG
-printf '/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: ["./dist/*.css", "./public/asset/**/*.{css,js,html}", "./template/*.{html}", "./template/**/*.{php,js,css,html}"],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}' > tailwind.config.js
+printf '/** @type {import('tailwindcss').Config} */\nmodule.exports = {\n  content: ["./dist/*.css", "./public/asset/**/*.{css,js,html}", "./template/*.{php,js,css,html}", "./template/**/*.{php,js,css,html}"],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}' > tailwind.config.js
 
 # TEMPLATE HEADER
 printf '<!doctype html>\n<html>\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>'"$project_name"'</title>\n<link href="/asset/css/style.css" rel="stylesheet">\n</head>\n<body>\n' > template/header.html
