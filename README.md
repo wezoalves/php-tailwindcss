@@ -28,7 +28,7 @@ sh project-server.sh
 ```
 
 
-##### Project Estruture
+##### Project Structure
 ```code
 - dist/
         input.css { file base tailwind css }
